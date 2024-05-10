@@ -9,7 +9,6 @@
       </div>
     </div>
     <div class="price">
-
       <!-- <div *ngIf ="product.discount === 0">${{product?.price.toFixed(2)}}</div>
       <div *ngIf ="product.discount > 0" class = "discount-tag">
         ${{(product.price * (1-product.discount)) .toFixed(2)}}
@@ -23,10 +22,14 @@
         <!-- <div [style.color] ="product.discount > 0 ? 'red' : ''"  [ngClass] ="getDiscountedClasses(product)">
           {{product.price | currency:'GBP'}}
         </div> -->
-      
-        <div [ngStyle]="{color:product.discount > 0  ? 'red  ' :''}"
-            [ngClass] = "getDiscountedClasses(product)"></div>
-      <div *ngIf ="product.discount > 0" class = "discount-tag">
+        
+        <div [ngStyle]="{color:product.discount > 0  ? 'red' :''}"
+             [ngClass] = "getDiscountedClasses(product)">
+             {{product.price | currency:'GBP'}}
+        </div>
+
+      <div *ngIf ="product.discount > 0" 
+          class = "discount-tag">
         {{product.price * (1-product.discount) | currency:'GBP'}}
        </div>
 
