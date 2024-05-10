@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- parthensis bind in direction of template to componenet -->
+    <div class="filters">
+      <a class="button bold" (click) = "filterType='Heads'">Heads</a>
+      <a class="button bold" (click) = "filterType ='Arms'">Arms</a>
+      <a class="button bold" (click) = "filterType = 'Torsos'">Torsos</a>
+      <a class="button bold" (click) = "filterType = 'Bases' ">Bases</a>
+      <a class="button bold" (click)=  "filterType = ''" >All</a>
+    </div>
+   
+    <ul class="products">
+
+      <li class="product-item" *ngFor="let productItem of getFilteredProducts()">
+        <div class="product">
+          <bot-product-details [product] = productItem></bot-product-details>
+        </div>
+      </li>
+
+    </ul>
+  </div>
