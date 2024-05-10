@@ -1,0 +1,35 @@
+<div class="product">
+    <div class="product-details">
+      <!-- square brackets bind in the direction of component to the template   -->
+      <img [src]="getImageUrl(product)" [alt] = "product?.imageName" />
+      <div class="product-info"> 
+        <div class="name red">{{product?.name}}</div>
+        <div class="description">{{product?.description}}</div>
+        <div class="category">Part Type: {{product?.category}} </div>
+      </div>
+    </div>
+    <div class="price">
+
+      <!-- <div *ngIf ="product.discount === 0">${{product?.price.toFixed(2)}}</div>
+      <div *ngIf ="product.discount > 0" class = "discount-tag">
+        ${{(product.price * (1-product.discount)) .toFixed(2)}}
+       </div> -->
+       <!-- //using pipes to above ,currency pipe  -->
+      <!-- <div *ngIf ="product.discount === 0">{{product?.price | currency:'GBP'}}</div>
+      <div *ngIf ="product.discount > 0" class = "discount-tag">
+        {{product.price * (1-product.discount) | currency:'GBP'}}
+       </div> -->
+
+        <!-- <div [style.color] ="product.discount > 0 ? 'red' : ''"  [ngClass] ="getDiscountedClasses(product)">
+          {{product.price | currency:'GBP'}}
+        </div> -->
+      
+        <div [ngStyle]="{color:product.discount > 0  ? 'red  ' :''}"
+            [ngClass] = "getDiscountedClasses(product)"></div>
+      <div *ngIf ="product.discount > 0" class = "discount-tag">
+        {{product.price * (1-product.discount) | currency:'GBP'}}
+       </div>
+
+      <button class="cta" (click)="addToCart(product)">Buy</button>
+    </div>
+  </div>
