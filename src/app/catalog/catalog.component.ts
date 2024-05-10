@@ -194,5 +194,9 @@ export class CatalogComponent {
       return this.filterType === '' ?  this.products : this.products?.filter((product : any) =>product.category == this.filterType)
     }
 
+
+    AddToCart(product:any){
+      console.log(product.name);
+    }
    
 }

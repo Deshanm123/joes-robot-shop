@@ -12,7 +12,7 @@
 
       <li class="product-item" *ngFor="let productItem of getFilteredProducts()">
         <div class="product">
-          <bot-product-details [product] = productItem></bot-product-details>
+          <bot-product-details [product] = productItem (CartClicked) = "AddToCart(productItem)"></bot-product-details>
         </div>
       </li>
 
