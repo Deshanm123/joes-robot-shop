@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { IProduct } from './product.model';
+import {CartService} from '../cart.service';
+
 
 @Component({
   selector: 'bot-catalog',
@@ -9,7 +11,10 @@ import { IProduct } from './product.model';
 export class CatalogComponent {
     products : any;
     filterType : string =  '';
-    cart : IProduct[] =[];
+
+    //injecting the cart Service using DI
+    // instead of this you can do the constructor injection which makes easier for testing 
+     private cartSvc : CartService = inject(CartService)
 
     constructor(){
         this.products =[
@@ -188,15 +193,14 @@ export class CatalogComponent {
       ];
     }
 
-   
-
     getFilteredProducts(){
       return this.filterType === '' ?  this.products : this.products?.filter((product : any) =>product.category == this.filterType)
     }
 
 
     AddToCart(product:any){
-      console.log(product.name);
+        this.cartSvc.AddItem(product);
+      // console.log(product.name);
     }
    
 }
