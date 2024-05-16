@@ -14,7 +14,7 @@ export class CatalogComponent {
 
     //injecting the cart Service using DI
     // instead of this you can do the constructor injection which makes easier for testing 
-     private cartSvc : CartService = inject(CartService)
+    private cartSvc : CartService = inject(CartService)
 
     constructor(){
         this.products =[
@@ -196,7 +196,6 @@ export class CatalogComponent {
     getFilteredProducts(){
       return this.filterType === '' ?  this.products : this.products?.filter((product : any) =>product.category == this.filterType)
     }
-
 
     AddToCart(product:any){
         this.cartSvc.AddItem(product);

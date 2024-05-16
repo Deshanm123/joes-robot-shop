@@ -9,8 +9,7 @@ import { Component,Input,EventEmitter, Output } from '@angular/core';
 
 export class ProductDetailsComponent {
   @Input() product!: IProduct; //!mark says ignore the  variable initilaization and continue 
-  @Output() CartClicked = new EventEmitter<any>();
- // cart : IProduct[] = [];
+  @Output() CartClick = new EventEmitter<any>();
  
   getImageUrl(product : any){
     if(product !== null  && product.imageName !== '')
@@ -25,8 +24,8 @@ export class ProductDetailsComponent {
       return '';
   }
 
-  addToCartClick(product : IProduct){
-    this.CartClicked.emit()
+  AddToCartClicked(product : IProduct){
+    this.CartClick.emit()
   //   this.cart.push(product);
   //   console.log(`the product ${product.name} added to cart`);
    }
