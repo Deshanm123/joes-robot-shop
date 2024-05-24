@@ -2,11 +2,11 @@
   <!-- parthensis bind in direction of template to componenet -->
     
   <div class="filters">
-      <a class="button bold" [routerLink]="['/catalog/','Heads']">Heads</a>
-      <a class="button bold" [routerLink]="['/catalog/','Arms']">Arms</a>
-      <a class="button bold" [routerLink]="['/catalog/','Torses']">Torsos</a>
-      <a class="button bold" [routerLink]="['/catalog/','Bases']">Bases</a>
-      <a class="button bold" [routerLink]="['/catalog/','']">All</a>
+      <a class="button bold" [routerLink]="['/catalog']" [queryParams] = "{filterType:'Heads'}">Heads</a>
+      <a class="button bold" [routerLink]="['/catalog/']" [queryParams] = "{filterType:'Arms'}">Arms</a>
+      <a class="button bold" [routerLink]="['/catalog/']" [queryParams]= "{filterType:'Torsos'}">Torsos</a>
+      <a class="button bold" [routerLink]="['/catalog/']" [queryParams] = "{filterType:'Bases'}">Bases</a>
+      <a class="button bold" [routerLink]="['/catalog/']">All</a>
   </div>
    
     <ul class="products">

@@ -71,8 +71,8 @@ export class CatalogComponent {
         this.products = products;
       })
 
-      this.route.params.subscribe((params)=>{
-        this.filterType = params['filterType'] ?? '';
+      this.route.queryParams.subscribe((param)=>{
+        this.filterType = param['filterType'] ?? '';
       })
 
     }
