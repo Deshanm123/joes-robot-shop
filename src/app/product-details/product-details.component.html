@@ -1,11 +1,11 @@
 <div class="product">
     <div class="product-details">
       <!-- square brackets bind in the direction of component to the template   -->
-      <img [src]="getImageUrl(product)" [alt] = "product?.imageName" />
+      <img [src]="getImageUrl(product)" [alt] = "product.imageName" />
       <div class="product-info"> 
-        <div class="name red">{{product?.name}}</div>
-        <div class="description">{{product?.description}}</div>
-        <div class="category">Part Type: {{product?.category}} </div>
+        <div class="name red">{{product.name}}</div>
+        <div class="description">{{product.description}}</div>
+        <div class="category">Part Type: {{product.category}} </div>
       </div>
     </div>
     <div class="price">
