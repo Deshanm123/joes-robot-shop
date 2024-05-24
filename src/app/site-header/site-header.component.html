@@ -1,10 +1,12 @@
 <div class="container">
+  <!-- routerLinkActive checks the current page is active ,if it's then assign the given css styling,
+     ex-here you can find active class in our project that highlights links in pink -->
   <div class="left">
-    <img class="logo" src="/assets/images/logo.png" alt="Logo" />
-    <a routerLink ="/home">Home</a>
-    <a [routerLink]="['/catalog/','']">Catalog</a>
+    <img class="logo" src="/assets/images/logo.png" alt="Logo" routerLinkActive="active" />
+    <a routerLink ="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/catalog/" routerLinkActive="active">Catalog</a>
     <div class="cart">
-      <a routerLink="/cart">Cart</a>
+      <a routerLink="/cart" routerLinkActive="active">Cart</a>
     </div>
   </div>
   <div class="right">
