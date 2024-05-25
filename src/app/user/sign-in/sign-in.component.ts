@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { IUserCredentials } from '../user.model';
+ 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class SignInComponent {
+   credentials: IUserCredentials = {email : '' , password : ''}
 
+   constructor(){
+
+   }
 }

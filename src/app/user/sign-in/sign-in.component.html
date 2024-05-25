@@ -1,10 +1,17 @@
+
+<!-- The binding data from componenet model to templatelike=>  [component] ="Model.variable" = template value  -->
+<!-- (value)=""     eg-event-->
 <div class="container">
     <form class="form">
       <img class="logo" src="/assets/images/logo.png" />
       <div class="sign-in">Sign In</div>
       <div class="sub-text">to acquire awesome bots</div>
-      <input name="email" placeholder="Email Address" type="text" />
-      <input name="password" placeholder="Password" type="password" />
+      <!-- two way data binding -->
+      <!-- if we change the value of email  by typing input box on our form ,it will update credentials.email variable in componenet-->
+      <!-- also if we were to update credentials.email property it will refelect on the text box input -->
+      <!-- NgModel element needs a name property to the element thats how it find on the model -->
+      <input name="email"  [(ngModel)] = "credentials.email" placeholder="Email Address" type="text" />
+      <input name="password" [(ngModel)] = "credentials.password" placeholder="Password" type="password" />
       <div class="buttons">
         <button type="submit" class="button cta">
           Sign In
