@@ -2,7 +2,8 @@
 <!-- The binding data from componenet model to templatelike=>  [component] ="Model.variable" = template value  -->
 <!-- (value)=""     eg-event-->
 <div class="container">
-    <form class="form">
+  <!-- //method we call on the componenet on ngsubmit is used -->
+    <form class="form" (ngSubmit)="signInUserFun()">
       <img class="logo" src="/assets/images/logo.png" />
       <div class="sign-in">Sign In</div>
       <div class="sub-text">to acquire awesome bots</div>
@@ -17,5 +18,6 @@
           Sign In
         </button>
       </div>
+      <p *ngIf="signInError"> Something Wrong, Plz try again </p>
     </form>
   </div>
