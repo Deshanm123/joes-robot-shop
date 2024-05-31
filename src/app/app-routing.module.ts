@@ -21,10 +21,12 @@ const routes : Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes) //own generic angular router module injected and as a result this custom made router inherit some features like routerLink in htmlsite header 
   ],
   exports: [RouterModule]
   //The configured router module at the root level of the application.
-  // routes is passed as an argument to forRoot, which means the app’s routing configuration is defined by the routes array
+  // routes is passed as an argument to forRoot, which means the app’s routing configuration is defined by the routes arrayvv
 })
 export class AppRoutingModule { }
+//Aprouting Module is custome module but we inherit features own agnular modules due to 
+  
