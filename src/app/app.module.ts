@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import {FormsModule} from '@angular/forms';
+import { TemplateFormControlComponent } from './user/template-form-control/template-form-control.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import {FormsModule} from '@angular/forms';
     SiteHeaderComponent,
     ProductDetailsComponent,
     CartComponent,
-    SignInComponent
+    SignInComponent,
+    TemplateFormControlComponent
   ],
-  imports: [BrowserModule , HttpClientModule, AppRoutingModule,FormsModule   ],
+  imports: [BrowserModule , HttpClientModule, AppRoutingModule,FormsModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })
